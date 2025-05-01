@@ -1,4 +1,3 @@
-# main.py
 import argparse, os
 import pandas as pd, numpy as np
 from kaggle.api.kaggle_api_extended import KaggleApi
