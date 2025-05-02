@@ -23,6 +23,34 @@ Edit
 - This will download the datasets from Kaggle, preprocess them, train all models, and save outputs (models and plots) in the project directory.
 - If you wish to run parts of the pipeline separately, you can modify the script accordingly (e.g. comment out download or training sections).
 
+# Next-Gen Malware Analysis: Harnessing AI for Advanced Threat Intelligence
+
+This is the final package directory containing the analysis tool.
+
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Download and analyze with your Kaggle credentials:
+
+```bash
+python -m malware_tool.cli \
+  --kaggle_user YOUR_USERNAME \
+  --kaggle_key YOUR_KEY \
+  [--sample_static sample_static.csv] \
+  [--no_download]
+```
+
+- `--sample_static`: specify a CSV (in `data/static/`) to use instead of default.
+- `--no_download`: skip downloading datasets if already present.
+
+Generated images will appear in `images/`, and trained models in `models/`.
+
+
 ## Datasets
 The pipeline uses the following Kaggle datasets:
 - **Drebin** – Android malware dataset (malware vs benign)  
